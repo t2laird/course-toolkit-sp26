@@ -1,3 +1,33 @@
 1*1=1
 2*2=4
 9*9=81
+          # 在该行中搜索关键词
+                o_cols = [i for i, x in enumerate(row_values) if any(kw in x for kw in KEYWORDS_ORIG)]
+                d_cols = [i for i, x in enumerate(row_values) if any(kw in x for kw in KEYWORDS_DUP)]
+                
+                if o_cols and d_cols:
+                    for o in o_cols:
+                        for d in d_cols:
+                            if o == d: continue 
+                            
+                            try:
+                                # 验证数据密度
+                                sample_data = df_scan.iloc[r+1:, [o, d]].copy()
+                                sample_data = sample_data.apply(pd.to_numeric, errors='coerce')
+                                valid_data = sample_data.dropna()
+                                count = len(valid_data)
+                                
+                                if count > max_valid_rows:
+                                    max_valid_rows = count
+                                    best_candidate = {
+                                        'sheet': sheet,
+                                        'header_row': r,
+                                        'col_orig_idx': o,
+                                        'col_dup_idx': d,
+                                        'col_orig_name': row_values[o],
+                                        'col_dup_name': row_values[d]
+                                    }
+                            except:
+                                continue
+
+        if best_candidate and max_valid_rows > 3:
