@@ -18,7 +18,7 @@ Contributors:
 - Zirui Zhang
 - Xinrui Li
 - Jiaheng Xie
-
+- Zongbo Li
 
 This is our shared collection of useful resources and code snippets for Data Science. We will work on adding the resources from the Brightspace Site here over time.
 
