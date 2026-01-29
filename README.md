@@ -11,6 +11,7 @@ Contributors:
 - Lei Wei
 - Weizhan Gao
 - Qiuyu Wang
+- Jingyi Guo
 
 
 This is our shared collection of useful resources and code snippets for Data Science. We will work on adding the resources from the Brightspace Site here over time.
