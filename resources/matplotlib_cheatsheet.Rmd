@@ -1,0 +1,80 @@
+---
+title: "matplotlib_cheatsheet"
+output: html_document
+---
+
+Matplotlib Cheat Sheet
+
+This resource summarizes common matplotlib operations used in data visualization.
+
+Common Operations
+	•	Creating basic plots
+	•	Customizing labels and titles
+	•	Adjusting styles and colors
+	•	Saving figures
+
+Why Useful
+
+Matplotlib is the foundational plotting library in Python.
+This cheat sheet helps beginners quickly recall common plotting syntax
+for data analysis and visualization tasks.
+
+## Import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data
+x = np.arange(0, 10)
+y = x ** 2
+
+# Basic line plot
+plt.plot(x, y)
+plt.show()
+
+# Scatter plot
+plt.scatter(x, y)
+plt.show()
+
+# Bar chart
+plt.bar(x, y)
+plt.show()
+
+# Histogram
+plt.hist(y, bins=10)
+plt.show()
+
+# Labels and title
+plt.plot(x, y)
+plt.xlabel("X axis")
+plt.ylabel("Y axis")
+plt.title("Simple Line Plot")
+plt.show()
+
+# Legend
+plt.plot(x, y, label="y = x^2")
+plt.legend()
+plt.show()
+
+# Figure size
+plt.figure(figsize=(8, 5))
+plt.plot(x, y)
+plt.show()
+
+# Grid
+plt.plot(x, y)
+plt.grid(True)
+plt.show()
+
+# Multiple lines
+plt.plot(x, y, label="x^2")
+plt.plot(x, x**3, label="x^3")
+plt.legend()
+plt.show()
+
+# Save figure
+plt.plot(x, y)
+plt.savefig("plot.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+# Clear figure
+plt.clf()
