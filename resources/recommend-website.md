@@ -1,0 +1,7 @@
+- Link: [https://learning.sap.com/]
+- Description:
+     - A website to learn more about the SAP
+- Why it's useful:
+     -It is very helpful when you want to find some resources 
+- Example/Notes:
+     - we can also get the certification and so on.
