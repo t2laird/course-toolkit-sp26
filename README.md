@@ -22,7 +22,7 @@ Contributors:
 - Jiawei Guo
 - Jiayu Chen
 - Zhuoyan Li
-
+- haonan li
 
 This is our shared collection of useful resources and code snippets for Data Science. We will work on adding the resources from the Brightspace Site here over time.
 
